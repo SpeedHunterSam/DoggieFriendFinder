@@ -25,7 +25,7 @@ app.set("view engine", "handlebars");
 
 //const routes = require("./controllers/catsController.js");
 
-//require("./routing/apiRoutes.js")(app);
+require("./app/routing/apiRoutes.js")(app);
 require("./app/routing/htmlRoutes")(app);
 
 //app.use(routes);
