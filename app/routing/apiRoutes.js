@@ -8,6 +8,23 @@ module.exports = function(app){
 
     app.get("/api/friends", function(req, res) {
         res.json(surveyScores);
+        
+
+        //code for comparing differences in values in array (temp location).
+
+        /*
+        const arrSum = arr => arr.reduce((a,b) => a + b, 0);  //create a function for summing the array values
+        console.log(arrSum(surveyScores.scores));
+        */
+
+       let numbers = surveyScores[0].scores;
+       let sum = 0;
+       for (let i = 0; i < numbers.length; i++) {
+         sum += numbers[i]
+       }
+
+       console.log(sum);
+
       });
     
     
@@ -18,7 +35,7 @@ module.exports = function(app){
       // (ex. User completes request... this data is then sent to the server...
       // Then the server saves the data to the surveyScores array)
       // ---------------------------------------------------------------------------
-    /*
+/*
       app.post("/api/friends", function(req, res) {
         // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
         // It will do this by sending out the value "true" have a table
@@ -50,3 +67,16 @@ module.exports = function(app){
 
 
 };
+
+
+/*
+
+//this function compares the difference between two values
+
+function difference(a, b) {
+  return Math.abs(a - b);
+}
+
+
+
+*/
