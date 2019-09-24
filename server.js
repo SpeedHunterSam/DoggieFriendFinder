@@ -1,5 +1,6 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
+const path = require("path");
 
 const PORT = process.env.PORT || 8080;
 
@@ -25,7 +26,7 @@ app.set("view engine", "handlebars");
 //const routes = require("./controllers/catsController.js");
 
 //require("./routing/apiRoutes.js")(app);
-//require("./routing/htmlRoutes.js")(app);
+require("./app/routing/htmlRoutes")(app);
 
 //app.use(routes);
 
